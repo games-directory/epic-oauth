@@ -26,15 +26,15 @@ module Epic
       attr_writer :client_id, :client_secret, :redirect_uri, :debug
 
       def client_id
-        @client_id || 'xyza78913tJMtm5OYZpBvvsASteUDuCE'
+        @client_id
       end
 
       def client_secret
-        @client_secret || 'cq+/DGnBATJNBWZNJDM8tQKUt2sSEd+iyUDg6Y4lEDU'
+        @client_secret
       end
 
       def redirect_uri
-        @redirect_uri || 'https://directory.eu.ngrok.io/my_auth/epic'
+        @redirect_uri
       end
 
       def debug
