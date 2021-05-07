@@ -5,14 +5,7 @@ require 'epic/oauth/session'
 module Epic
   module Oauth
     class Error < StandardError; end
-
-    # XBOX::Oauth.configure do |config|
-    #   config.client_id = ''
-    #   config.client_secret = ''
-    #   config.redirect_uri = ''
-    #   config.debug = ''
-    # end
-    #
+    
     def self.configure(&block)
       block.call(configuration)
     end
@@ -33,19 +26,19 @@ module Epic
       attr_writer :client_id, :client_secret, :redirect_uri, :debug
 
       def client_id
-        @client_id
+        @client_id || 'xyza78913tJMtm5OYZpBvvsASteUDuCE'
       end
 
       def client_secret
-        @client_secret
+        @client_secret || 'cq+/DGnBATJNBWZNJDM8tQKUt2sSEd+iyUDg6Y4lEDU'
       end
 
       def redirect_uri
-        @redirect_uri
+        @redirect_uri || 'https://directory.eu.ngrok.io/my_auth/epic'
       end
 
       def debug
-        @debug || false
+        @debug
       end
     end
   end
